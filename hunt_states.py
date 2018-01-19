@@ -35,6 +35,11 @@ def generate_solve_pattern(solve_pattern_dict):
 	else:
 		raise ValueError
 
+def Unlock:
+	def __init__(self):
+		pass
+	
+
 class PuzzleDefinition:
 	def __init__(self, puzzle_definition_dict):
 		self.id = puzzle_definition_dict['id']
