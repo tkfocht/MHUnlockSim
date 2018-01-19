@@ -9,6 +9,9 @@
             },
             "unlock": {
                 "rule": "hunt_start"
+            },
+            "reward": {
+                "score": 10
             }
         },
         {
@@ -19,8 +22,10 @@
                 "sd_seed": 10.0
             },
             "unlock": {
-                "rule": "puzzles_solved",
-                "prereqs": ["p1"]
+                "rule": "hunt_start"
+            },
+            "reward": {
+                "score": 10
             }
         },
         {
@@ -31,13 +36,30 @@
                 "sd_seed": 30.0
             },
             "unlock": {
-                "rule": "puzzles_solved",
-                "prereqs": ["p2"]
+                "rule": "hunt_start"
+            },
+            "reward": {
+                "score": 20
+            }
+        },
+        {
+            "id": "p4",
+            "solve_pattern": {
+                "rule": "independent_gamma",
+                "avg_seed": 55.0,
+                "sd_seed": 30.0
+            },
+            "unlock": {
+                "rule": "score_minimum",
+                "score": 20
             }
         }
     ],
     "end_state": {
         "rule": "puzzles_solved",
-        "prereqs": ["p3"]
+        "prereqs": ["p4"]
+    },
+    "initial_team_state": {
+        "score": 0
     }
 }

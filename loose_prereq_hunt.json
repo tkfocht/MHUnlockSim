@@ -19,8 +19,7 @@
                 "sd_seed": 10.0
             },
             "unlock": {
-                "rule": "puzzles_solved",
-                "prereqs": ["p1"]
+                "rule": "hunt_start"
             }
         },
         {
@@ -31,13 +30,25 @@
                 "sd_seed": 30.0
             },
             "unlock": {
+                "rule": "hunt_start"
+            }
+        },
+        {
+            "id": "p4",
+            "solve_pattern": {
+                "rule": "independent_gamma",
+                "avg_seed": 55.0,
+                "sd_seed": 30.0
+            },
+            "unlock": {
                 "rule": "puzzles_solved",
-                "prereqs": ["p2"]
+                "prereqs": ["p1","p2","p3"],
+                "minimum": 2
             }
         }
     ],
     "end_state": {
         "rule": "puzzles_solved",
-        "prereqs": ["p3"]
+        "prereqs": ["p4"]
     }
 }
