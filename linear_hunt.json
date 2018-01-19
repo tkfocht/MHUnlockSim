@@ -1,0 +1,31 @@
+{
+	"puzzles": [
+		{
+			"id": "p1",
+			"solve_pattern": {
+				"rule": "independent_gamma",
+				"avg_seed": 45.0,
+				"sd_seed": 15.0
+			},
+			"unlock": {
+				"rule": "hunt_start"
+			}
+		},
+		{
+			"id": "p2",
+			"solve_pattern": {
+				"rule": "independent_gamma",
+				"avg_seed": 35.0,
+				"sd_seed": 10.0
+			},
+			"unlock": {
+				"rule": "puzzles_solved",
+				"prereqs": ["p1"]
+			}
+		}
+	],
+	"end_state": {
+		"rule": "puzzles_solved",
+		"prereqs": ["p2"]
+	}
+}
